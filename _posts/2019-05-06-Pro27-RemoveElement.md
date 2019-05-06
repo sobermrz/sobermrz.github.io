@@ -31,8 +31,8 @@ It doesn't matter what you leave beyond the returned length.
 思路没什么可说的，但要注意 nums[res++] = nums[i] 这个，应该先执行数组赋值，再执行res++操作。
 
 ## 问题解惑
-我一开始很疑惑，为什么需要我返回的明明是res，但Leetcode给我的output却包含了remove之后的数组呢？并且，我尝试了一下，将 nums[res++] = nums[i]改成res++，看能不能通过测试，结果是不可以！！！当然，“不可以”我是理解的，因为题目说了length = 2, with the first巴拉巴拉。可为什么我明明只返回了res，但系统却能读取到我remove之后的数组呢（output给出的是我remove之后的数组）？
-原来玄机如下，题目也给出了说明：
+我一开始很疑惑，为什么需要我返回的明明是res，但Leetcode给我的output却包含了remove之后的数组呢？并且，我尝试了一下，将 nums[res++] = nums[i]改成res++，看能不能通过测试，结果是不可以！！！当然，“不可以”我是理解的，因为题目说了length = 2, with the first巴拉巴拉。可为什么我明明只返回了res，但系统却能读取到我remove之后的数组呢（output给出的是我remove之后的数组）？  
+原来玄机如下，题目也给出了说明：  
 *Confused why the returned value is an integer but your answer is an array?*
 *Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.*
 

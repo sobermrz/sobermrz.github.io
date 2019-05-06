@@ -37,7 +37,7 @@ It doesn't matter what you leave beyond the returned length.
 *Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.*
 
 ### 代码
-```
+```java
 package leetcode;
 
 public class RemoveElement {

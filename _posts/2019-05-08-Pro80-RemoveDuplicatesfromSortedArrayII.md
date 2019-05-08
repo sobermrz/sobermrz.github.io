@@ -1,8 +1,8 @@
 ---
 layout:     post   				    # 使用的布局（不需要改）
-title:      JAVA对象，类，方法，属性				# 标题 
+title:      Problem80 RemoveDuplicatesfromSortedArrayII  # 标题 
 subtitle:    #副标题
-date:       2019-05-07 				# 时间
+date:       2019-05-08 				# 时间
 author:     Ruizhi Ma 						# 作者
 header-img:              	#这篇文章标题背景图片
 catalog: true 						# 是否归档

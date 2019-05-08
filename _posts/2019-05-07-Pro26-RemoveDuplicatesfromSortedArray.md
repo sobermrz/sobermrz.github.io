@@ -8,9 +8,11 @@ header-img:              	#这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - Leetcode刷题
+    - Array
+    - 难度：易
 ---
 
-# 题目类型：Array 难度：易 题号：26
+# 题号：26
 ## 问题描述
 Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 

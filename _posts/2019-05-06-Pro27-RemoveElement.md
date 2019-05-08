@@ -8,9 +8,11 @@ header-img:              	#这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - Leetcode刷题
+    - Array
+    - 难度：易
 ---
 
-# 题目类型：Array 难度：易 题号：27
+# 题号：27
 
 ## 问题描述
 Given an array nums and a value val, remove all instances of that value in-place and return the new length.
@@ -36,7 +38,7 @@ It doesn't matter what you leave beyond the returned length.
 *Confused why the returned value is an integer but your answer is an array?*
 *Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.*
 
-### 代码
+## 代码
 ```java
 package leetcode;
 

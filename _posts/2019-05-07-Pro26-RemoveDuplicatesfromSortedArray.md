@@ -50,7 +50,7 @@ public class RemoveDuplicatesfromSortedArray {
 
         int res = 1;
         for(int i = 1; i < nums.length; i++){
-            if(nums[i] != nums[i-1]){
+            if(nums[i] != nums[res - 1]){
                 nums[res++] = nums[i];
             }
         }
@@ -58,3 +58,4 @@ public class RemoveDuplicatesfromSortedArray {
     }
 }
 ```
+**注意：强烈建议这题和Pro.80对比看一下，理解会加深很多！！！**

@@ -33,7 +33,7 @@ Your function should return length = 7, with the first seven elements of nums be
 It doesn't matter what values are set beyond the returned length.
 
 # 解题思路
-这题和26题非常像，这一题也是更加加深了我对这个类型题目的理解。其实核心思想就是：用两个指针（姑且称之为指针吧），index用来定位，i用来遍历数组。判断的条件就是，如果遍历到的数（下标为i），和定位的数前一个(下标为 index-1)相等，并且定位数前一个(下标为 index-1)和定位数前前一个数（下标为 index-2）也相等，则说明有三个相等的数了，就跳过。此时index指向的下标还没有重新存入数，并且index是重新存入数的长度。
+这题和26题非常像，这一题也是更加加深了我对这个类型题目的理解。其实核心思想就是：用两个指针（姑且称之为指针吧），index用来定位，i用来遍历数组。实际上除了初始情况，```index```的值在整个过程都是作为计算长度的，而重新存入的值一直都是由```index - 1```指向，所以应该先比较i和index-1指向的值；再比较index - 1和index - 2的值。若两次比较都相等，则说明三个数都相等，则应该跳过当前数，i遍历下一个。
 
 ```java
 package leetcode;
@@ -46,7 +46,8 @@ public class RemoveDuplicatesfromSortedArrayII {
 
         int index = 2;
         for(int i = 2; i < nums.length; i++){
-            if(!(nums[i] == nums[index - 1] && nums[index - 1] == nums[index - 2])){
+            if(!(nums[i] == nums[index - 1] && nums[index - 1] == nums[index - 2]))//可以简化为if(nums[i] != nums[index - 2])
+            {
                 nums[index++] = nums[i];
             }
         }

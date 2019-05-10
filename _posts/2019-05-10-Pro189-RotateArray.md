@@ -61,9 +61,9 @@ public class RotateArray {
             newNums[i] = nums[i];
         }
 
-        /*Every elements in the new array will be put into the original array.The putting method
-        is each element in the new array should be put into an new index, which equals to their index plus k mode
-        the length of nums, in the original array*/
+        /*Every elements in the new array will be put into the original array.The putting method  
+        is each element in the new array should be put into an new index, which equals to their index plus k mode  
+        the length of nums, in the original array*/  
         int index = 0;
         for (int i = 0; i < nums.length; i++){
             index = (i + k) % nums.length;

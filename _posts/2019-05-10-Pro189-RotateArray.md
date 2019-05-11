@@ -80,21 +80,46 @@ Memory Usage: 36.2 MB, less than 67.61% of Java online submissions for Rotate Ar
 
 
 ## 解决思路二
-
+用java内置的```System.arraycopy```函数进行浅复制。    
+1. 创建一个比原数组长k的数组  
+2. 将原数组通过```System.arraycopy```函数复制进新数组，注意，原数组第0位应该存入新数组的第k位，以此类推  
+3. 将原数组第length - k位到最后一位，复制进入新数组第0位到第k - 1位    
+4. 将新数组拷贝给原数组实现rotate   
 
 ## 问题解惑
-
+```System.arraycopy```使用方法：System.arraycopy(原数组, 原数组起始位, 新数组, 新数组起始位, 复制长度)
 
 ## 代码
 
 ### 解法二
 ```java
+//Define an new array
+int[] newNums = new int[nums.length + k];
 
+//Judge the boundary condition
+if(nums.length == 0){
+    return;
+}
+
+//copy arrays
+k %= nums.length;
+System.arraycopy(nums, 0, newNums, k, nums.length);
+System.arraycopy(nums, nums.length - k, newNums, 0, k);
+System.arraycopy(newNums, 0, nums,0, nums.length);
 ```
 
+## 效率探究
+Leetcode给出的运行效率：   
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Rotate Array.  
+Memory Usage: 36.6 MB, less than 66.67% of Java online submissions for Rotate Array.  
+
+## 小总结
+**System.arraycopy()函数是JVM内置的函数，由底层的汇编语言写成，所以运行效率比for循环等方式拷贝数组快非常多，而且，数组越长，优势越明显**
 
 ## 解决思路三
-
+第三种方法取巧，没有开辟新数组，比较节省内存单元。  
+1. 将原数组从第0位开始，首尾依次调换位置（第0位和最后一位换，第一位和倒数第二位调换，以此类推）  
+2. 将调换完毕之后的数组[0,k - 1]范围内依次调换，[k,nums.leng - 1]范围内依次调换    
 
 ## 问题解惑
 
@@ -102,8 +127,43 @@ Memory Usage: 36.2 MB, less than 67.61% of Java online submissions for Rotate Ar
 ## 代码
 ### 解法三
 ```java
+package leetcode;
+
+public class RotateArray {
+    public void rotate(int[] nums, int k){
+
+        //Judge the boundary condition
+        if(nums.length == 0){
+            return;
+        }
+
+        //reverse index from 0 to the end
+        k %= nums.length;
+        reverse(nums, 0, nums.length - 1);
+        //reverse index from 0 to k - 1
+        reverse(nums, 0, k - 1);
+        //reverse index from k to the end
+        reverse(nums, k, nums.length - 1);
+    }
+
+    //reserve function
+    public void reverse(int[] nums,int start, int end){
+        while(start < end){
+            int temp = 0;
+            temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start += 1;
+            end -= 1;
+        }
+    }
+}
 
 ```
+## 效率探究
+Leetcode给出的运行效率：   
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Rotate Array.  
+Memory Usage: 36.2 MB, less than 67.61% of Java online submissions for Rotate Array.  
 
 ## 小感想
-**注意：  **
+**这个里面写reverse函数进行调用的思想，有一点我在第277题里面提到的那个意思，不管内部实现，假设我已经有了这个API，我先拿来调用，后期我再来实现它**

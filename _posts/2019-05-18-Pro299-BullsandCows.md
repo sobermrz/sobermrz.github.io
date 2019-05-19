@@ -80,6 +80,10 @@ class Solution {
     }
 }
 ```
+###效率探究
+Runtime: 9 ms, faster than 12.10% of Java online submissions for Bulls and Cows.  
+Memory Usage: 36.1 MB, less than 81.97% of Java online submissions for Bulls and Cows.  
+
 ## 解法二  
 ### 解决思路  
 1. 创建一个bucket数组，目的是借用桶排序的思想（emmm...虽然暂时还没学桶排序），进行多存储。对于secret中出现的数（比如说3），在bucket数组中，将下标为3的元素自增一次。对于guess中出现的数（比如说5），在bucket数组中，将下标为5的元素自减一次。  
@@ -121,5 +125,8 @@ class Solution {
     }
 }
 ```
-## 小感想
+### 效率探究
+Runtime: 2 ms, faster than 58.72% of Java online submissions for Bulls and Cows.  
+Memory Usage: 35.4 MB, less than 87.55% of Java online submissions for Bulls and Cows.  
+### 小感想
 **注意：可能我太笨了，瞪着眼睛看了好几遍没看懂这种方法，然后用IDE调试，一步步跟着走，大概了解了流程，然后再草稿纸上举例再验算一遍，瞬间懂了，实在是叹服这种方法的巧妙！！！所以以后看不懂的代码，先用IDE调试，然后看参数的变化，说不定就很快能懂啦！建议先用IDE调试，跟着走一遍，再看看我写的解题思路和问题解惑，一定能有更深的体会！！！**

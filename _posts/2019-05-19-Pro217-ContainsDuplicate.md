@@ -60,7 +60,7 @@ class Solution {
     }
 }
 ```
-##效率探究
+## 效率探究
 Runtime: 4 ms, faster than 96.59% of Java online submissions for Contains Duplicate.  
 Memory Usage: 41.3 MB, less than 71.70% of Java online submissions for Contains Duplicate.
 ## 小感想

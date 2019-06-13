@@ -12,7 +12,7 @@ tags:								#标签
     - 难度：易
 ---
 
-# 题号：
+# 题号：122
 ## 问题描述
 Say you have an array for which the ith element is the price of a given stock on day i.
 

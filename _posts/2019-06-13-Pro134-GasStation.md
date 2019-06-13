@@ -58,10 +58,14 @@ You cannot travel back to station 2, as it requires 4 unit of gas but you only h
 Therefore, you can't travel around the circuit once no matter where you start.
 
 ## 解决思路
-
+从第一个加油站开始走，用```left```记录剩余油量，如果```left```一直大于0，没问题；如果```left```小于0，则从下一个位置重新计算。并且，用```lack```记录之前所有欠下的油量，如果最后```left - lack```大于0，则说明可以有满足要求的出发点；若```left - lack```小于0，则说明没有满足要求的，就返回-1.
 
 ## 问题解惑
+1. 为什么```left < 0```，不是从之前的某一个点计算，而是从当前点的下一个开始计算？  
+待解答。
 
+2. lack表示的欠下的油量具体含义是什么？  
+待解答。
 
 ## 代码
 ```java

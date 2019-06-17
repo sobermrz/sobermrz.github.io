@@ -1,6 +1,6 @@
 ---
 layout:     post   				    # 使用的布局（不需要改）
-title:      Problem				# 标题 
+title:      Problem XX				# 标题 
 subtitle:    #副标题
 date:       2019-				# 时间
 author:     Ruizhi Ma 						# 作者
@@ -11,21 +11,19 @@ tags:								#标签
     - 
     - 难度：
 ---
-
-# 题号：
-## 问题描述
+# 问题描述
 
 
-## 解决思路
+# 解决思路
 
 
-## 问题解惑
+# 问题解惑
 
 
-## 代码
+# 代码
 ```java
 
 ```
 
-## 小感想
+# 小感想
 **注意：  **

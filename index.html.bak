@@ -1,6 +1,6 @@
 ---
 layout: page
-description: "½ÅÌ¤ÊµµØ ÑöÍûĞÇ¿Õ"
+description: "Down to earth, looking up at the stars."
 ---
 
 {% for post in paginator.posts %}

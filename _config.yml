@@ -11,7 +11,7 @@ github_repo: "https://github.com/sobermrz/sobermrz.github.io.git" # you code rep
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "路漫漫其修远兮 吾将上下而求索"
+sidebar-about-description: "脚踏实地，仰望星空"
 sidebar-avatar: /img/myself-img.JPG      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

@@ -1,20 +1,20 @@
 ---
-layout:     post   				    # ʹ�õĲ��֣�����Ҫ�ģ�
-title:      JAVA�ڲ��࣬��Ա�ڲ��࣬��̬�ڲ��࣬�����ڲ��� # ���� 
-subtitle:   �������ֺ��÷���� #������
-date:       2019-				# ʱ��
-author:     Ruizhi Ma 						# ����
-header-img:              	#��ƪ���±��ⱳ��ͼƬ
-catalog: true 						# �Ƿ�鵵
-tags:								#��ǩ
-    - JAVA����
+layout:     post   				    # 使用的布局（不需要改）
+title:      JAVA内部类，成员内部类，静态内部类，方法内部类 # 标题 
+subtitle:   概念区分和用法简介 #副标题
+date:       2019-				# 时间
+author:     Ruizhi Ma 						# 作者
+header-img:              	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - JAVA基础
 ---
 # 
 
 ```java
 
 ```
-# ���н����  
+# 运行结果：  
 
 
-# �ܽ�
+# 总结
